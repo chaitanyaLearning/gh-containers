@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(eventRoutes);
 
 // app.listen(process.env.PORT);
-const client = new MongoClient(uri);
+const client = MongoClient(uri);
 client.connect()
     .then(() => {
         app.listen(PORT, () => {
